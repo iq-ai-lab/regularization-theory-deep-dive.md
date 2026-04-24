@@ -21,7 +21,7 @@ L1/L2의 Bayesian 해석 · Dropout의 3중 해석 · Normalization의 신화와
 [![Torchvision](https://img.shields.io/badge/Torchvision-0.16-EE4C2C?style=flat-square)](https://pytorch.org/vision/)
 [![Docs](https://img.shields.io/badge/Docs-33개-blue?style=flat-square&logo=readthedocs&logoColor=white)](./README.md)
 [![Lines](https://img.shields.io/badge/Lines-10k+-informational?style=flat-square)](./README.md)
-[![Theorems](https://img.shields.io/badge/Theorems_proven-68개-success?style=flat-square)](./README.md)
+[![Theorems](https://img.shields.io/badge/Theorems_proven-130+개-success?style=flat-square)](./README.md)
 [![Reproductions](https://img.shields.io/badge/Paper_reproductions-11개-critical?style=flat-square)](./README.md)
 [![Exercises](https://img.shields.io/badge/Exercises-99개-orange?style=flat-square)](./README.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square&logo=opensourceinitiative&logoColor=white)](./LICENSE)
@@ -245,7 +245,7 @@ Regularization에 관한 대부분의 자료는 **"L2는 weight를 작게, L1은
 
 ## 🏆 핵심 정리 인덱스
 
-이 레포에서 **완전한 증명** 또는 **원 논문 실험 재현**을 제공하는 대표 결과 모음입니다. 각 챕터 문서에서 $\square$로 종결되는 엄밀한 증명 또는 `results/` 하의 플롯을 확인할 수 있습니다. (전체 68개 정리 중 핵심만 발췌)
+이 레포에서 **완전한 증명** 또는 **원 논문 실험 재현**을 제공하는 대표 결과 모음입니다. 각 챕터 문서에서 $\square$로 종결되는 엄밀한 증명 또는 `results/` 하의 플롯을 확인할 수 있습니다. (전체 130+개 정리 중 핵심 19개 발췌)
 
 | 정리·결과 | 서술 | 출처 문서 |
 |----------|------|----------|
@@ -269,7 +269,7 @@ Regularization에 관한 대부분의 자료는 **"L2는 weight를 작게, L1은
 | **AdamW Decoupled Decay** | Adam + L2의 $v_t$ 정규화로 인한 왜곡 vs AdamW의 분리된 $-\eta\lambda\theta_t$ | [Ch7-03](./ch7-modern-synthesis/03-adamw.md) |
 | **4축 통합 분류** | Prior / Ensemble / Landscape / Invariance로 모든 기법 재배열, 실전 recipe 도출 | [Ch7-04](./ch7-modern-synthesis/04-unified-recipe.md) |
 
-> 💡 **챕터별 문서·정리 수**: Ch1(5문서, 11정리) · Ch2(5문서, 10정리) · Ch3(6문서, 12정리) · Ch4(5문서, 9정리) · Ch5(4문서, 8정리) · Ch6(4문서, 9정리) · Ch7(4문서, 9정리) — 합계 **33문서 + 68 정리·실험**, 약 **10,000+ 라인** 분량 (실험 노트북 포함 시 16k).
+> 💡 **챕터별 문서·정리 수**: Ch1(5문서, 29정리) · Ch2(5문서, 23정리) · Ch3(6문서, 21정리) · Ch4(5문서, 12정리) · Ch5(4문서, 17정리) · Ch6(4문서, 18정리) · Ch7(4문서, 13정리) — 합계 **33문서 + 130+ 정리·증명·실험**, 약 **13,000+ 라인** 분량 (실험 노트북 포함 시 16k+).
 
 ---
 
