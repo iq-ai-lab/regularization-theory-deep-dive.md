@@ -1,0 +1,167 @@
+# =============================================================================
+# Regularization Theory Deep Dive — .gitignore
+# =============================================================================
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebook ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ── NumPy / SciPy / PyTorch cache ───────────────────────────────────────────
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.safetensors
+
+# Framework caches (PyTorch)
+.torch_cache/
+
+# HuggingFace / datasets cache (Ch5 distillation 실험에서 사용 시)
+.cache/huggingface/
+datasets_cache/
+
+# ── Experiment outputs ───────────────────────────────────────────────────────
+# 생성된 이미지 파일 (각 챕터의 시각화 결과물)
+# Ch1: Lasso/Ridge coefficient path, Ch2: MC Dropout uncertainty,
+# Ch3: BN vs no-BN landscape Lipschitz, Ch4: Mixup decision boundary,
+# Ch5: ECE reliability diagram, Ch6: Early stopping vs Ridge path,
+# Ch7: SWA/SAM flat minimum visualization
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.gif
+*.mp4
+
+# 훈련 결과 / 체크포인트
+results/
+outputs/
+logs/
+checkpoints/
+runs/
+wandb/
+mlruns/
+tensorboard/
+*.log
+*.csv
+*.h5
+*.hdf5
+
+# 재현 실험 산출물
+reproductions/srivastava2014/*.pt
+reproductions/gal2016/*.pt
+reproductions/wager2013/*.npz
+reproductions/santurkar2018/*.pt
+reproductions/zhang2018-mixup/*.pt
+reproductions/guo2017-calibration/*.pt
+reproductions/izmailov2018-swa/*.pt
+reproductions/foret2021-sam/*.pt
+reproductions/loshchilov2019-adamw/*.pt
+
+# 다운로드된 데이터셋 (CIFAR, MNIST, ImageNet 부분 등)
+data/
+datasets/
+!data/.gitkeep
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+# JetBrains (PyCharm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ── Documentation build ──────────────────────────────────────────────────────
+docs/_build/
+docs/generated/
+site/
+.mkdocs_cache/
+
+# ── Secrets / Credentials ────────────────────────────────────────────────────
+.env.local
+.env.*.local
+secrets.py
+credentials.json
+*.pem
+*.key
+
+# ── Miscellaneous ────────────────────────────────────────────────────────────
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+*.mo
+*.pot
