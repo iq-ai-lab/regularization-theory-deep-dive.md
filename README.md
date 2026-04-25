@@ -2,15 +2,39 @@
 
 # 🛡️ Regularization Theory Deep Dive
 
-**"L2 regularization $\lambda\|w\|^2$을 쓰는 것과, 이것이 가중치에 대한 Gaussian prior $w \sim \mathcal{N}(0, 1/2\lambda)$의 MAP 추정과 정확히 같음을 증명할 수 있는 것은 다르다"**
+### L2 regularization
+
+$$\lambda \|w\|^2$$
+
+### 을 쓰는 것과, 이것이 가중치에 대한 **Gaussian prior**
+
+$$w \sim \mathcal{N}\!\left(0,\, \tfrac{1}{2\lambda}\right)$$
+
+### 의 **MAP 추정과 정확히 같음** 을 증명할 수 있는 것은 **다르다.**
 
 <br/>
 
-> *"Dropout을 쓰는 것과 — (1) Dropout이 지수적 수의 서브네트워크 앙상블이고 (`Srivastava 2014`) (2) MC Dropout으로 Variational Inference의 근사이며 (`Gal & Ghahramani 2016`) (3) linear model에서 feature별 adaptive L2와 동치 (`Wager et al. 2013`) — 이 세 가지 해석을 각각 유도할 수 있는 것은 다르다.  
-> BatchNorm의 효과를 "internal covariate shift 완화"로 외우는 것과, `Santurkar et al. 2018`이 이를 실험으로 반박하고 **loss landscape smoothing**이 실제 효과임을 Lipschitzness 증명으로 보인 것을 따라가는 것은 다르다."*
+> *Dropout 을 **쓰는 것** 과,*
+>
+> *(1) Dropout 이 **지수적 수의 서브네트워크 앙상블** 이고 (Srivastava 2014)*
+> *(2) MC Dropout 으로 **Variational Inference 의 근사** 이며 (Gal & Ghahramani 2016)*
+> *(3) linear model 에서 **feature 별 adaptive L2 와 동치** (Wager et al. 2013)*
+>
+> *— 이 **세 가지 해석을 각각** 유도할 수 있는 것은 다르다.*
+>
+> *BatchNorm 의 효과를 "internal covariate shift 완화" 로 외우는 것과, Santurkar et al. 2018 이 이를 실험으로 반박하고 **loss landscape smoothing** 이 실제 효과임을 Lipschitzness 증명으로 보인 것을 따라가는 것은 다르다.*
 
-L1/L2의 Bayesian 해석 · Dropout의 3중 해석 · Normalization의 신화와 실제 · Vicinal Risk로서의 Data Augmentation · Label Smoothing의 Calibration · SGD·Early Stopping의 Implicit Bias · SAM·SWA·AdamW의 현대 recipe까지  
-**"Regularization은 왜 작동하는가"** 를 **Bayesian prior · Ensemble · Landscape · Invariance의 4축**으로 통일하여 끝까지 파헤칩니다
+<br/>
+
+**다루는 정리·기법 (시간순)**
+
+Tikhonov 1963 *Tikhonov regularization* · Hoerl 1970 *Ridge* · Tibshirani 1996 *Lasso* · Hinton 2012 / Srivastava 2014 *Dropout* · Wager 2013 *Dropout = adaptive L2* · Ioffe–Szegedy 2015 *BatchNorm* · Santurkar 2018 *BN = landscape smoothing* · Gal 2016 *MC Dropout = VI* · Zhang 2017 *Data Aug = Vicinal Risk* · Szegedy 2016 *Label Smoothing* · Loshchilov 2019 *AdamW* · Izmailov 2018 *SWA* · Foret 2021 *SAM*
+
+<br/>
+
+**핵심 질문**
+
+> **Regularization 은 왜 작동하는가** — Bayesian prior · Ensemble · Landscape · Invariance 의 **4축** 으로 통일하여 L1/L2 · Dropout · Normalization · Data Augmentation · Label Smoothing · Implicit Bias · SAM/SWA/AdamW 의 현대 recipe 까지 끝까지 파헤칩니다.
 
 <br/>
 
